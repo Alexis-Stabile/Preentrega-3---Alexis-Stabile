@@ -97,6 +97,8 @@ admin.site.register(Profesor)
 
 #http://127.0.0.1:8000/AppNueva/cursoformulario_2/
 
+#super user: Alexis (alexis.stabile@gmail.com) pasword:42995407
+
     
 
 
