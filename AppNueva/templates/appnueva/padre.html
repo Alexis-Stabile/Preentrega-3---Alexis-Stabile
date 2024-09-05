@@ -6,17 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tercera Pre Entrega - Alexis Stabile </title>
+        <title>ENTREGA FINAL - Alexis Stabile </title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'appnueva/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'AppNueva/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">Tercera Pre Entrega - Alexis Stabile</a>
+                <a class="navbar-brand" href="#!">ENTREGA FINAL - Alexis Stabile</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -26,27 +26,53 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'cursos' %}">Cursos</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'profesores' %}">Profesores</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'estudiantes' %}">Estudiantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'About_me' %}">About_me</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        {# DROPDOWN PARA LA CUENTA DE USUARIO #}
+        {% if request.user.is_authenticated %}
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ request.user.username }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{% url 'Logout' %}">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        {% else %}
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuenta
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{% url 'login' %}">Inciar Sesión</a></li>
+                    <li><a class="dropdown-item" href="{% url 'register' %}">Crear cuenta</a></li>
+                </ul>
+            </div>
+        {% endif %}
                     </ul>
                 </div>
             </div>
         </nav>
+        
+        {% block contenidoquecambia %}
+        
         <!-- Header - set the background image for the header in the line below-->
-        <header class="py-5 bg-image-full" style="background-image: url('AppNueva/imagenes/imagenmar.jpeg')">
+        <header class="py-5 bg-image-full" style="background-image: url('/static/appnueva/Imagenes/imagenmar.jpg')">
             <div class="text-center my-5">
                 <img class="img-fluid rounded-circle mb-4" src="{% static 'AppNueva/imagenes/imagenperrito.jpeg' %}" alt="..." />
-                <h1 class="text-white fs-3 fw-bolder">Full Width Pics</h1>
-                <p class="text-white-50 mb-0">Landing Page Template</p>
+                <h1 class="text-white fs-3 fw-bolder">BIENVENIDO A MI PAGINA DE INICIO</h1>
+                <p class="text-white-50 mb-0"></p>
             </div>
         </header>
-        {% block contenidoquecambia %}
-        {% endblock %}
         <!-- Content section-->
         <section class="py-5">
             <div class="container my-5">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2>ESTAMOS APRENDIENDO, SEPA DISCULPAR LAS MOLESTIAS</h2>
+                    <div class="text-center my-5">
+                        <h2>INICIA SESION PARA DISFRUTAR DE TODAS LAS FUNCIONALIDADES DE ESTE SITIO WEB</h2>
                         <p class="lead"></p>
                         <p class="mb-0">The universe is almost 14 billion years old, and, wow! Life had no problem starting here on Earth! I think it would be inexcusably egocentric of us to suggest that we're alone in the universe.</p>
                     </div>
@@ -80,3 +106,4 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+{% endblock %}

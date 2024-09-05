@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% extends "AppNueva/padre.html" %}
+
+    {% load static %}
+
+    {% block contenidoquecambia %}
+
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('/static/appnueva/Imagenes/imagenmar.jpg')">
+            <div class="text-center my-5">
+                <img class="img-fluid rounded-circle mb-4" src="{% static 'AppNueva/imagenes/imagenperrito.jpeg' %}" alt="..." />
+                <h1 class="text-white fs-3 fw-bolder">Alexis Stabile</h1>
+                <p class="text-white-50 mb-0">Hoy es {{ hoy }}</p>
+            </div>
+        </header>
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>ACERCA DE MI:</h2>
+                        <p class="lead"></p>
+                        <p class="mb-0">Hola, Soy Alexis, tengo 36 años y me encuentro finalizando este curso de Python. Quizas te estes preguntando como llegue hasta aqui, asique aca va un pequeño resumen de mi camino:</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% endblock %}
+</body>
+</html>

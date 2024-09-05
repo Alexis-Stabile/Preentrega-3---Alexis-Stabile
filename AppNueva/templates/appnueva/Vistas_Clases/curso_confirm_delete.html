@@ -14,20 +14,13 @@
             <div class="col-lg-6">
                 <h2>PAGINA DE CURSOS</h2>
 
+                <form action="" method="POST">
+                    {% csrf_token %}
+            
+                    <p>¿Estás seguro que deseas borrar el curso "{{ object }}"?</p>
+                    <input type="submit" value="Borrar">
+            
+                </form>
+
             
 {% endblock %}
-
-
-    <p>Estamos buscando el: {{ comision }}</p>
-
-{% if cursos %}
-    <ul>
-        {% for curso in cursos %}
-            <li>{{ curso.nombre }}</li>
-            <li>{{ curso.comision }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
-    
-</body>
-</html>

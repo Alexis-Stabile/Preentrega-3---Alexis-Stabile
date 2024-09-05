@@ -14,20 +14,12 @@
             <div class="col-lg-6">
                 <h2>PAGINA DE CURSOS</h2>
 
+                <p>Curso: <i>{{ curso.nombre }}</i></p>
+                <p>Comision: <i>{{ curso.comision }}</i></p>
+                
+                <p>
+                    <a href="{% url 'Lista' %}">Regresar</a>
+                </p>
+
             
 {% endblock %}
-
-
-    <p>Estamos buscando el: {{ comision }}</p>
-
-{% if cursos %}
-    <ul>
-        {% for curso in cursos %}
-            <li>{{ curso.nombre }}</li>
-            <li>{{ curso.comision }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
-    
-</body>
-</html>

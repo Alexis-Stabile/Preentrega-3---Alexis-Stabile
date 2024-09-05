@@ -1,0 +1,72 @@
+{% extends "AppNueva/padre.html" %}
+
+{% load static %}
+{% block contenidoquecambia %}
+<!-- Header - set the background image for the header in the line below-->
+<header class="py-5 bg-image-full" style="background-image: url('/static/appnueva/Imagenes/imagenmar.jpg')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'AppNueva/imagenes/imagenperrito.jpeg' %}" alt="..." />
+        <h1 class="text-white fs-3 fw-bolder">BIENVENIDO A MI PAGINA DE INICIO</h1>
+        <p class="text-white-50 mb-0"></p>
+    </div>
+</header>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>PARA INICIAR SESION INGRESA TUS DATOS</h2>
+                {# Este div sólo está agregado para centrar el formulario en la página usando Bootstrap #}
+    <div class="d-flex justify-content-center">
+
+        {# Con este div colocamos el título y debajo el formulario usando Bootstrap #}
+        <div class="d-flex flex-column">
+
+            {# Mensaje personalizado en la vista de Login con estilos de Bootstrap #}
+            <p class="fs-5 fw-bold">{{ msg_login }}</p>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                
+                {{ form.as_p }}
+                <input type="submit" value="Iniciar sesión">
+
+            </form>
+
+        </div>
+    </div>
+</html>
+                <p class="lead"></p>
+                <p class="mb-0"></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Image element - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')">
+    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+    <div style="height: 20rem"></div>
+</div>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>Engaging Background Images</h2>
+                <p class="lead">The background images used in this template are sourced from Unsplash and are open source and free to use.</p>
+                <p class="mb-0">I can't tell you how many people say they were turned off from science because of a science teacher that completely sucked out all the inspiration and enthusiasm they had for the course.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+
+{% endblock %}

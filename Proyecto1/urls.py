@@ -22,6 +22,7 @@ from Proyecto1.views import saludo, otra_vista, dia_de_hoy, muestra_nombre, prob
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AppNueva/', include('AppNueva.urls')),
+    path('users/', include('users.urls')),
     path('saludo/', saludo),
     path('otra_vista/', otra_vista),
     path('dia/', dia_de_hoy),
