@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from .forms import UserRegisterForm
@@ -41,3 +41,8 @@ def register(request):
     form = UserRegisterForm()     
     return render(request,"users/registro.html" ,  {"form":form, "msg_register": msg_register})
 
+
+def custom_logout(request):
+
+    logout(request)
+    return redirect('inicio')
