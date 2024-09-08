@@ -22,7 +22,12 @@
 
 9 - Desde la pagina cursos, se puede agregar un curso a traves del boton "Agregar Curso"
 
-10- Datos de Super User: Alexis (alexis.stabile@gmail.com) pasword:42995407
+10 - La pagina About-me http://127.0.0.1:8000/AppNueva/About_me/ contiene un pequeño resumen acerca de mi, y desde esta misma pagina se podra ver en tiempo real la fecha y hora.
+
+11- Datos de Super User: Alexis (alexis.stabile@gmail.com) pasword:42995407
+
+12 - Planilla de Tests: https://docs.google.com/spreadsheets/d/1IRNi1kDDk7go70VjQzynVcG154YIFVkD/edit?gid=1088746476#gid=1088746476
+
 
 
 
