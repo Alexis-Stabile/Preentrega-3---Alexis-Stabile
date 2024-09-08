@@ -28,6 +28,7 @@
 
 12 - Planilla de Tests: https://docs.google.com/spreadsheets/d/1IRNi1kDDk7go70VjQzynVcG154YIFVkD/edit?gid=1088746476#gid=1088746476
 
+13- Video Explicativo: https://drive.google.com/file/d/1tUCEClfnfSShLmnMgXXoxdq4ec-F5PXG/view?usp=sharing
 
 
 
