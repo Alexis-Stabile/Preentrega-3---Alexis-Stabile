@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import locale
 from datetime import datetime
 from AppNueva.forms import CursoFormulario, Buscar
 from AppNueva.models import Curso, Estudiante, Profesor
@@ -30,6 +31,7 @@ def About_me(req):
      return render(req,'AppNueva/About_me.html/')
 
 def About_me(request):
+     locale.setlocale(locale.LC_ALL, 'es_ES')
      hoy = datetime.now().strftime("%A %d de %B, %Y")
      return render(request, 'AppNueva/About_me.html/', {'hoy': hoy})
 

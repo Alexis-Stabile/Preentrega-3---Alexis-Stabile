@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "AppNueva/padre.html" %}
+
+    {% load static %}
+
+    {% block contenidoquecambia %}
+<!-- Header - set the background image for the header in the line below-->
+<header class="py-5 bg-image-full" style="background-image: url('/static/appnueva/Imagenes/imagenmar.jpg')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'AppNueva/imagenes/imagenperrito.jpeg' %}" alt="..." />
+        <h1 class="text-white fs-3 fw-bolder">ACTUALIZAR DATOS DE USUARIO</h1>
+        <p class="text-white-50 mb-0"></p>
+    </div>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <table>
+            {{ form.as_table }}
+        </table>
+
+        <input type="submit" value="Cambiar pass">
+        
+
+    </form>
+
+    {% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

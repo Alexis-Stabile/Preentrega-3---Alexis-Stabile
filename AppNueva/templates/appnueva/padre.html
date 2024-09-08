@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -32,13 +32,16 @@
         {% if request.user.is_authenticated %}
 
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ request.user.username }}
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="{% url 'Logout' %}">Cerrar sesión</a></li>
-                </ul>
-            </div>
+                    <img src="{{request.user.imagen.imagen.url}}" alt="" style="height: 50px;width: 50px;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ request.user.username }}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{% url 'Logout' %}">Cerrar sesión</a></li>
+                            <li><a class="dropdown-item" href="{% url 'EditarPerfil' %}">Editar Perfil</a></li>
+                        </ul>
+                    </div>
 
         {% else %}
 
@@ -74,7 +77,7 @@
                     <div class="text-center my-5">
                         <h2>INICIA SESION PARA DISFRUTAR DE TODAS LAS FUNCIONALIDADES DE ESTE SITIO WEB</h2>
                         <p class="lead"></p>
-                        <p class="mb-0">The universe is almost 14 billion years old, and, wow! Life had no problem starting here on Earth! I think it would be inexcusably egocentric of us to suggest that we're alone in the universe.</p>
+                        <p class="mb-0"></p>
                     </div>
                 </div>
             </div>
